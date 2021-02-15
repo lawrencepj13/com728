@@ -9,7 +9,7 @@ if path == "left":
         print("You cross the treacherous waters")
     else:
         print("Try again adventurer")
-elif path =="right":
+elif path == "right":
     print("You come across a fort - will you enter?")
     enter = input()
     if enter == "yes":
