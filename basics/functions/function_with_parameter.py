@@ -1,7 +1,7 @@
 #define function with parameter to plan the escape
 def escape_by(plan):
     if plan == "jumping over":
-        print("We cannot escape that way! The boulder is moving too fast!")
+        print("We cannot escape that way! The boulder is too big!")
     elif plan == "running around":
         print("We cannot escape that way! The boulder is moving too fast!")
     elif plan == "going deeper":
