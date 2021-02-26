@@ -1,6 +1,6 @@
 def display_chars(path, num_of_chars):
     with open(f"{path}") as file:
-        data = file.read(num_of_chars == 5)
+        data = file.read(num_of_chars)
         print(data)
 def display_line(path):
     with open(f"{path}") as file:

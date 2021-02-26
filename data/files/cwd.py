@@ -8,7 +8,7 @@ def cwd():
         print(file)
 def run ():
     print("Processing...")
-    print(cwd())
+    cwd()
 
 run()
 
