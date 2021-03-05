@@ -52,6 +52,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\data\lists\index_list.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\data\lists\simple_list.py">
           <value>
             <Attribute>
