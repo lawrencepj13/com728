@@ -7,4 +7,5 @@ def run():
     print(bot_directions())
 
 
-run()
+if __name__ == "__main__":
+    run()

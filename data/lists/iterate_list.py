@@ -12,4 +12,6 @@ def menu():
 def run():
     print(menu())
 
-run()
+
+if __name__ == "__main__":
+    run()

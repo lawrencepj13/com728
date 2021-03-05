@@ -12,5 +12,5 @@ def run():
     print(f"{path[6]} for {path[7]} steps")
 
 
-run()
-
+if __name__ == "__main__":
+    run()

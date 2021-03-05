@@ -8,4 +8,5 @@ def run():
     print(f"Maxmimum likelihood of falling is:{probability[1]}% ")
 
 
-run()
+if __name__ == "__main__":
+    run()

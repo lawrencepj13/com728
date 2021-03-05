@@ -15,5 +15,6 @@ def run():
             good_steps.append(step)
     print(f"Good steps: {len(good_steps)}, bad steps: {len(bad_steps)}")
 
-run()
 
+if __name__ == "__main__":
+    run()

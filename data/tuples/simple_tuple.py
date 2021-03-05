@@ -8,4 +8,5 @@ def run():
     print(f"Minimum likelihood of falling: {min(value)}%")
 
 
-run()
+if __name__ == "__main__":
+    run()
