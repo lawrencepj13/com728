@@ -7,9 +7,9 @@ def menu():
     print("Please select a direction:")
     path = directions()
     for index in range(len(path)):
-        print(f"{index}: {path[index]}")
-    decision = int(input())
-    return decision
+        print("{}: {}".format(index, path[index]))
+    index = int(input())
+    return path[index]
 
 
 def run():
