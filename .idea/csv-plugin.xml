@@ -80,6 +80,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\data\tuples\simple_tuple.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
