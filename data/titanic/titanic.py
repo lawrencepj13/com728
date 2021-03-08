@@ -26,6 +26,18 @@ def display_menu():
     return response
 
 
+def display_passenger_names():
+    print("The names of the passengers are...")
+    with open("titanic.csv") as file:
+        csv_reader = csv.reader(file)
+        next(csv_reader)
+        passenger_name = ""
+        for names in csv_reader:
+            passenger_name += f"{names[3]}\n"
+    return passenger_name
+
+
+
 
 def run():
     file = load_data("titanic.csv")
@@ -35,6 +47,11 @@ def run():
     menu = display_menu()
     selected_response = menu
     print(f"You have selection option: {selected_response}")
+    if selected_response == 1:
+        print(display_passenger_names())
+    else:
+        print("Error! Option not recognized!")
+
 
 
 
