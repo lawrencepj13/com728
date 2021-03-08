@@ -8,10 +8,13 @@ def load_data(file_path):
     print("Loading Data...")
     with open("titanic.csv") as file:
         csv_reader = csv.reader(file)
-        headings = next(csv_reader)
-        records = len(list(csv_reader))
+        headings.append(next(csv_reader))
+        num_records = 0
+        for value in csv_reader:
+            records.append(value)
+            num_records = num_records + 1
         print("Done!")
-        return records
+        return num_records
 
 
 def display_menu():
@@ -28,29 +31,68 @@ def display_menu():
 
 def display_passenger_names():
     print("The names of the passengers are...")
-    with open("titanic.csv") as file:
-        csv_reader = csv.reader(file)
-        next(csv_reader)
-        passenger_name = ""
-        for names in csv_reader:
-            passenger_name += f"{names[3]}\n"
-    return passenger_name
+    for record in records:
+        passenger_name = record[3]
+        print(passenger_name)
+
+
+
+def display_num_survivors():
+    num_survived = 0
+    for record in records:
+        survival_status = record[1]
+        if survival_status == "1":
+            num_survived += 1
+    print(f"{num_survived} passengers survived")
+
+
+def display_pass_gen():
+    females = 0
+    males = 0
+    for record in records:
+        gender = record[4]
+        if gender == "male":
+            males += 1
+        elif gender == "female":
+            females += 1
+    print(f"females: {females}, males: {males}")
+
+def display_pass_per_age_grp():
+    children = 0
+    adults = 0
+    elderly = 0
+    for record in records:
+        if len(record[5]) > 0:
+            age = float(record[5])
+            if age < 18:
+                children += 1
+            elif age < 65:
+                adults += 1
+            else:
+                elderly += 1
+    print(f"children: {children}, adults: {adults}, elderly: {elderly}")
+
 
 
 
 
 def run():
-    file = load_data("titanic.csv")
-    num_records = records
-    records.append(load_data("titanic.csv"))
+    num_records = load_data("titanic.csv")
     print(f"Succesfully loaded {num_records} records.")
-    menu = display_menu()
-    selected_response = menu
+    selected_response = display_menu()
     print(f"You have selection option: {selected_response}")
     if selected_response == 1:
         print(display_passenger_names())
+    elif selected_response == 2:
+        print(display_num_survivors())
+    elif selected_response == 3:
+        print(display_pass_gen())
+    elif selected_response == 4:
+        print(display_pass_per_age_grp())
     else:
         print("Error! Option not recognized!")
+
+
 
 
 
