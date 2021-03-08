@@ -24,6 +24,7 @@ def display_menu():
   [2] Display the number of passengers that survived
   [3] Display the number of passengers per gender
   [4] Display the number of passengers per age group
+  [5] Display the number of survivors per age group"
   """)
     response = int(input())
     return response
@@ -72,6 +73,31 @@ def display_pass_per_age_grp():
                 elderly += 1
     print(f"children: {children}, adults: {adults}, elderly: {elderly}")
 
+#_c means count and _s means survived
+def display_surv_per_age_grp():
+    children_c = 0
+    children_s = 0
+    adults_c = 0
+    adults_s = 0
+    elderly_c = 0
+    elderly_s = 0
+    for record in records:
+        if len(record[5]) > 0:
+            age = float(record[5])
+            if age < 18:
+                children_c += 1
+                if record[1] == "1":
+                    children_s += 1
+            elif age < 65:
+                adults_c += 1
+                if record[1] == "1":
+                    adults_s += 1
+            else:
+                elderly_c += 1
+                if record[1] == "1":
+                    elderly_s += 1
+    print(f"Children:{children_s}/{children_c} Adults:{adults_s}/{adults_c} Elderly:{elderly_s}/{elderly_c}")
+
 
 
 
@@ -89,6 +115,8 @@ def run():
         print(display_pass_gen())
     elif selected_response == 4:
         print(display_pass_per_age_grp())
+    elif selected_response == 5:
+        print(display_surv_per_age_grp())
     else:
         print("Error! Option not recognized!")
 
