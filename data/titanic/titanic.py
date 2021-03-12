@@ -3,6 +3,9 @@ import csv
 
 records = []
 headings = []
+children = []
+adults = []
+elderly = []
 
 def load_data(file_path):
     print("Loading Data...")
@@ -15,6 +18,23 @@ def load_data(file_path):
             num_records = num_records + 1
         print("Done!")
         return num_records
+
+
+def age_data():
+    children = 0
+    adults = 0
+    elderly = 0
+    for record in records:
+        if len(record[5]) > 0:
+            age = float(record[5])
+            if age < 18:
+                children += 1
+            elif age < 65:
+                adults += 1
+            else:
+                elderly += 1
+    print("Additional calulcations completeted...")
+    return children, adults, elderly
 
 
 def display_menu():
@@ -73,30 +93,24 @@ def display_pass_per_age_grp():
                 elderly += 1
     print(f"children: {children}, adults: {adults}, elderly: {elderly}")
 
+
 #_c means count and _s means survived
 def display_surv_per_age_grp():
-    children_c = 0
+    ##global children, adults, elderly
     children_s = 0
-    adults_c = 0
     adults_s = 0
-    elderly_c = 0
     elderly_s = 0
-    for record in records:
-        if len(record[5]) > 0:
-            age = float(record[5])
-            if age < 18:
-                children_c += 1
-                if record[1] == "1":
-                    children_s += 1
-            elif age < 65:
-                adults_c += 1
-                if record[1] == "1":
-                    adults_s += 1
-            else:
-                elderly_c += 1
-                if record[1] == "1":
-                    elderly_s += 1
-    print(f"Children:{children_s}/{children_c} Adults:{adults_s}/{adults_c} Elderly:{elderly_s}/{elderly_c}")
+    for child in children:
+        if child == "1":
+            children_s += 1
+    for adult in adults:
+        if adult == "1":
+            adults_s += 1
+    for elderlys in elderly:
+        if elderlys == "1":
+            elderly_s += 1
+
+    print(f"Children:{children_s}/{children} Adults:{adults_s}/{adults} Elderly:{elderly_s}/{elderly}")
 
 
 
@@ -105,6 +119,7 @@ def display_surv_per_age_grp():
 def run():
     num_records = load_data("titanic.csv")
     print(f"Succesfully loaded {num_records} records.")
+    print(age_data())
     selected_response = display_menu()
     print(f"You have selection option: {selected_response}")
     if selected_response == 1:
