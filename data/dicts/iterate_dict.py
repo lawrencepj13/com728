@@ -1,5 +1,5 @@
 def patterns():
-    print("Dictionary:")
+
     sequences = {"Short Sequence":3, "Medium Sequence":2, "Long Sequence":1}
     return sequences
 
@@ -23,9 +23,13 @@ def display_items(data):
         print(f"{key}: {value}")
 
 def run():
+    print("Dictionary:")
     print(patterns())
+    print()
     display_keys(patterns())
+    print()
     display_values(patterns())
+    print()
     display_items(patterns())
 
 
