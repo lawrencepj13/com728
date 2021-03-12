@@ -80,6 +80,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\data\sets\simple_set.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\data\titanic\titanic.py">
           <value>
             <Attribute>
