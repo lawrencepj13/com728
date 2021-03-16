@@ -1,22 +1,23 @@
 import csv
 
+LINE_WIDTH = 85
 
 
 def started(msg=""):
-    print("-------------------------------------------------------------------------------------")
-    msg = "atheletes.csv"
-    print(f"Operation Started: Reading data from {msg}...\n")
+    output = f"Operation started: {msg}..."
+    dashes = "-" * LINE_WIDTH
+    print(f"{dashes}\n{output}\n")
 
 
 def completed():
-    print()
-    print("Operation Completed.")
-    print("-------------------------------------------------------------------------------------")
-
+    dashes = "-" * LINE_WIDTH
+    print(f"\nOperation completed.\n{dashes}\n")
 
 
 def error(msg):
-    print(f"Error! {msg}")
+    print(f"Error! {msg}\n")
+
+
 
 
 def menu():
@@ -38,7 +39,7 @@ def display_medal_tally(tally):
     print(f"| {'Bronze':<10} | {tally['Bronze']:<10} |")
 
 
-def display_medal_tally(team_tally):
+def display_team_medal_tally(team_tally):
     for team, tally in team_tally.items():
         print(team)
         print(f"\tGold:{tally['Gold']}, Silver:{tally['Silver']}, Bronze:{tally['Bronze']}")
