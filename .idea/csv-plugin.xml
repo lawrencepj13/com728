@@ -136,6 +136,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\data\persistence\insert_from_file.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\data\persistence\select_many.py">
           <value>
             <Attribute>
@@ -151,6 +158,13 @@
           </value>
         </entry>
         <entry key="\data\persistence\update_one.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\data\persistence_2\main.py">
           <value>
             <Attribute>
               <option name="separator" value=":" />
