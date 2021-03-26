@@ -164,6 +164,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\data\persistence_2\database.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\data\persistence_2\main.py">
           <value>
             <Attribute>
