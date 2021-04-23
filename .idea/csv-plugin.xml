@@ -227,6 +227,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\visuals\plots\path.py">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\visuals\plots\simple.py">
           <value>
             <Attribute>
