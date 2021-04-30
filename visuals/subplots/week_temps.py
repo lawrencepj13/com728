@@ -24,7 +24,7 @@ def run():
     # plt.show()
 
     fig, (ax1, ax2) = plt.subplots(1, 2)
-    ax1.plot(range(len(data['week 1'])), data['week 1'])
+    ax1.bar(range(len(data['week 1'])), data['week 1'])
     ax1.set_title('week 1')
     ax1.set_ylabel('Temp')
     ax1.set_xlabel('Day')
