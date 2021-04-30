@@ -248,6 +248,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\visuals\subplots\temps,py.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
