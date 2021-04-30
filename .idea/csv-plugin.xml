@@ -255,6 +255,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\visuals\subplots\week_temps.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>
