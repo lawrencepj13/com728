@@ -227,6 +227,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\visuals\animations\function.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\visuals\plots\path.py">
           <value>
             <Attribute>
@@ -249,6 +256,13 @@
           </value>
         </entry>
         <entry key="\visuals\subplots\temps,py.py">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\visuals\subplots\titanic_subplots.py">
           <value>
             <Attribute>
               <option name="separator" value="," />
